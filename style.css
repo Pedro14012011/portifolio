@@ -1,0 +1,525 @@
+/* Definição de Variáveis de Cores (Light Mode) */
+:root {
+    --cor-fundo: #F8F9FA;
+    --cor-texto: #212529;
+    --cor-primaria: #0D6EFD;
+    --cor-secundaria: #e9ecef;
+    --cor-cartao: #ffffff;
+    --sombra: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Definição de Variáveis de Cores (Dark Mode) */
+body.tema-escuro {
+    --cor-fundo: #121212;
+    --cor-texto: #E0E0E0;
+    --cor-primaria: #BB86FC;
+    --cor-secundaria: #2c2c2c;
+    --cor-cartao: #1e1e1e;
+    --sombra: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+/* Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilo Base do Corpo */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Personalização da Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--cor-fundo);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria);
+    border-radius: 5px;
+}
+
+/* Cabeçalho e Navegação */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--cor-cartao);
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.4s ease;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+/* Menu Mobile First */
+.navegacao {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-cartao);
+    box-shadow: var(--sombra);
+}
+
+.navegacao.ativa {
+    display: flex;
+}
+
+.lista-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.lista-menu li {
+    margin: 0.8rem 0;
+}
+
+.lista-menu a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.lista-menu a:hover {
+    color: var(--cor-primaria);
+}
+
+.botao-menu, .botao-tema {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--cor-texto);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.botao-tema:hover {
+    color: var(--cor-primaria);
+}
+
+/* Estrutura Principal */
+main {
+    padding: 2rem 5%;
+}
+
+section {
+    margin-bottom: 5rem;
+    padding-top: 3rem;
+}
+
+.titulo-secao {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--cor-primaria);
+}
+
+.subtitulo-secao {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    color: var(--cor-texto);
+}
+
+/* Seção Heroi (Sobre Mim) */
+.secao-heroi {
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo-heroi {
+    max-width: 900px;
+}
+
+.texto-digitacao {
+    font-size: 1.8rem;
+    font-weight: 700;
+    min-height: 3rem;
+    border-right: 3px solid var(--cor-primaria);
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.subtitulo {
+    font-size: 1.3rem;
+    color: var(--cor-texto);
+    margin: 1.5rem 0;
+}
+
+.descricao-sobre {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0 auto 2.5rem auto;
+}
+
+.botao-destaque {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botao-destaque:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(13, 110, 253, 0.4);
+}
+
+/* Seção Educação (Badges) */
+.cartao-educacao {
+    background-color: var(--cor-cartao);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease, background-color 0.4s ease;
+}
+
+.cartao-educacao:hover {
+    transform: translateY(-5px);
+}
+
+.cabecalho-educacao {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.icone-destaque {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+}
+
+.selo-excelencia {
+    background-color: #ffc107;
+    color: #000;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+}
+
+.instituicao {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.formatura {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.trilha-curso {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.badge.concluido {
+    background-color: #198754;
+    color: #fff;
+}
+
+.badge.pendente {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+}
+
+/* Seção Projetos */
+.grade-projetos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.cartao-projeto {
+    background-color: var(--cor-cartao);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease, background-color 0.4s ease;
+}
+
+.cartao-projeto:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.espaco-imagem {
+    background-color: var(--cor-secundaria);
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-texto);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.espaco-imagem i {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    color: var(--cor-primaria);
+}
+
+.conteudo-projeto {
+    padding: 2rem;
+}
+
+.conteudo-projeto h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.tecnologias {
+    margin: 1.5rem 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tag-tech {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+}
+
+.links-projeto {
+    display: flex;
+    gap: 1rem;
+}
+
+.botao-link {
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    border: 2px solid var(--cor-primaria);
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.botao-link:hover {
+    background-color: var(--cor-primaria);
+    color: #fff;
+}
+
+.botao-link.desabilitado {
+    border-color: #6c757d;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+.botao-link.desabilitado:hover {
+    background-color: transparent;
+    color: #6c757d;
+}
+
+/* Repositórios de Estudo */
+.lista-repositorios {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.link-repositorio {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem;
+    background-color: var(--cor-cartao);
+    text-decoration: none;
+    color: var(--cor-texto);
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.link-repositorio:hover {
+    transform: translateX(10px);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+/* Contato */
+.texto-contato {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.grade-contatos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.cartao-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    background-color: var(--cor-cartao);
+    text-decoration: none;
+    color: var(--cor-texto);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.cartao-contato i {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.cartao-contato.email:hover {
+    background-color: #ea4335;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.cartao-contato.email:hover i {
+    color: #fff;
+}
+
+.cartao-contato.github:hover {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.cartao-contato.github:hover i {
+    color: #fff;
+}
+
+/* Rodapé */
+.rodape {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--cor-cartao);
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.4s ease;
+}
+
+.icone-coracao {
+    color: red;
+}
+
+/* Botão Flutuante Voltar Topo */
+.botao-voltar-topo {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+}
+
+.botao-voltar-topo.visivel {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.botao-voltar-topo:hover {
+    transform: scale(1.1);
+}
+
+/* Animações Scroll */
+.anima-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.anima-scroll.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries (Desktop e Tablets) */
+@media (min-width: 768px) {
+    .navegacao {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: none;
+        box-shadow: none;
+    }
+
+    .lista-menu {
+        flex-direction: row;
+        padding: 0;
+        gap: 2rem;
+    }
+
+    .botao-menu {
+        display: none;
+    }
+
+    .grade-projetos, .grade-contatos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .texto-digitacao {
+        font-size: 3rem;
+    }
+}
